@@ -88,7 +88,9 @@ if __name__ == "__main__":
     target = os.environ.get("TARGET")
     maintainer = os.environ["MAINTAINER"]
     commit_message = os.environ.get("COMMIT_MESSAGE", "")
-    script = os.environ.get("SCRIPT", "[]")
+    script = os.environ.get("SCRIPT")
+    if not script:
+        script = "[]"
     try:
         script = json.loads(script)
     except Exception:
