@@ -41,7 +41,7 @@ def run_script(target, script, commit_message=""):
     owner, repo = target.replace("https://github.com/", "").split("/")[:2]
     number = target.split("/")[-1]
     auth = os.environ["GITHUB_ACCESS_TOKEN"]
-    print(f"Extracting PR {number} from {owner/repo}")
+    print(f"Extracting PR {number} from {owner}/{repo}")
     gh = GhApi(owner=owner, repo=repo, token=auth)
     # here we get the target owner and branch so we can check it out below
     pull = gh.pulls.get(number)
