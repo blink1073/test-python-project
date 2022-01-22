@@ -24,4 +24,4 @@ jobs:
           pre_commit: true
           commit_message: "auto run pre-commit"
           target: ${{ github.event.issue.html_url }}
-          association: ${{ github.event.issue.author_association }}
+          association: ${{ github.event.comment.author_association }}
