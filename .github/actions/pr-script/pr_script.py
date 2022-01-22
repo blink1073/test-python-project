@@ -62,9 +62,9 @@ def run_script(target, script, commit_message=""):
 
     # Use email address for the GitHub Actions bot
     # https://github.community/t/github-actions-bot-email-address/17204/6
-    email = "41898282+github-actions[bot]@users.noreply.github.com"
+    email = "steven.silvester@ieee.org"
     run(f"git config user.email {email}")
-    run('git config user.name "GitHub Action"')
+    run('git config user.name "blink1073"')
     message = commit_message or "Run maintainer script"
     opts = f"-m '{message}' -m 'by {maintainer}' -m '{json.dumps(script)}'"
     run(f"git commit -a {opts}")
