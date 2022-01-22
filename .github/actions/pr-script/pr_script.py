@@ -40,7 +40,7 @@ def run_script(target, script, commit_message=""):
     print("Checking for authorized user")
     association = os.environ.get("ASSOCIATION", "COLLABORATOR")
     if association not in ["COLLABORATOR", "MEMBER", "OWNER"]:
-        raise ValueError(f"Cannot run for user with assocation {association}")
+        raise ValueError(f"Cannot run for user with association {association}")
     print(f"Finding owner and repo for {target}")
     owner, repo = target.replace("https://github.com/", "").split("/")[:2]
     number = target.split("/")[-1]
@@ -81,9 +81,6 @@ if __name__ == "__main__":
     maintainer = os.environ["MAINTAINER"]
     commit_message = os.environ.get("COMMIT_MESSAGE", "")
     script = os.environ.get("SCRIPT", "[]")
-    script_prefix = os.environ.get("SCRIPT_PREFIX", "")
-    if script:
-        script = script.replace(script_prefix, "")
     try:
         script = json.loads(script)
     except Exception:

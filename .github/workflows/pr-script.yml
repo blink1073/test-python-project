@@ -22,7 +22,7 @@ jobs:
         uses: ./.github/actions/pr-script
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          pre_commit: true
+          script: "[pip install pre-commit], [pre-commit run --all-files]"
           commit_message: "auto run pre-commit"
           target: ${{ github.event.issue.html_url }}
           association: ${{ github.event.comment.author_association }}
