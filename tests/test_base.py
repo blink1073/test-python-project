@@ -1,6 +1,7 @@
 import pytest
 
-from test_python_project import BaseClass, base_function
+from test_python_project import base_function
+from test_python_project import BaseClass
 
 given = pytest.mark.parametrize
 

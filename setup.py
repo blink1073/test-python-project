@@ -1,7 +1,9 @@
 """Python setup.py for test_python_project package"""
 import io
 import os
-from setuptools import find_packages, setup
+
+from setuptools import find_packages
+from setuptools import setup
 
 
 def read(*paths, **kwargs):
@@ -29,6 +31,8 @@ def read_requirements(path):
     ]
 
 
+console_script = "test_python_project = test_python_project.__main__:main"
+
 setup(
     name="test_python_project",
     version=read("test_python_project", "VERSION"),
@@ -39,8 +43,6 @@ setup(
     author="blink1073",
     packages=find_packages(exclude=["tests", ".github"]),
     install_requires=read_requirements("requirements.txt"),
-    entry_points={
-        "console_scripts": ["test_python_project = test_python_project.__main__:main"]
-    },
+    entry_points={"console_scripts": [console_script]},
     extras_require={"test": read_requirements("requirements-test.txt")},
 )
