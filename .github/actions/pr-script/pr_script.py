@@ -38,8 +38,8 @@ def run_script(target, script, commit_message=""):
     """Run a script on the target pull request URL"""
     # e.g. https://github.com/foo/bar/pull/81
     print("Checking for authorized user")
-    association = os.environ.get('ASSOCIATION', 'COLLABORATOR')
-    if association not in ['COLLABORATOR', 'MEMBER', 'OWNER']:
+    association = os.environ.get("ASSOCIATION", "COLLABORATOR")
+    if association not in ["COLLABORATOR", "MEMBER", "OWNER"]:
         raise ValueError(f"Cannot run for user with assocation {association}")
     print(f"Finding owner and repo for {target}")
     owner, repo = target.replace("https://github.com/", "").split("/")[:2]
@@ -66,9 +66,9 @@ def run_script(target, script, commit_message=""):
 
     # Use email address for the GitHub Actions bot
     # https://github.community/t/github-actions-bot-email-address/17204/6
-    email = "steven.silvester@ieee.org"
+    email = "41898282+github-actions[bot]@users.noreply.github.com"
     run(f"git config user.email {email}")
-    run('git config user.name "blink1073"')
+    run('git config user.name "GitHub Action"')
     message = commit_message or "Run maintainer script"
     opts = f"-m '{message}' -m 'by {maintainer}' -m '{json.dumps(script)}'"
     run(f"git commit -a {opts}")
