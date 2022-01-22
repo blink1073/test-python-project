@@ -10,6 +10,7 @@ jobs:
         id: check
         with:
           trigger: 'auto run pre-commit'
+      - uses: actions/checkout@v2
       - if: steps.check.outputs.triggered == 'true'
         uses: ./.github/actions/pr-script
         with:
