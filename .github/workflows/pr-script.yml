@@ -11,11 +11,12 @@ jobs:
         with:
           trigger: "auto run pre-commit"
       - uses: actions/checkout@v2
-      - name: Print Issue Info Again
+      - name: Print Issue Info Again 2
         run: |
           echo "${{ github.event.issue.html_url }}"
-          echo "${{ github.event.author_association }}"
           echo "${{ github.event.issue.author_association }}"
+          echo "${{ github.event.issue.user.login }}"
+          echo "${{ github.event.issue.user.email }}"
       - if: steps.check.outputs.triggered == 'true'
         uses: ./.github/actions/pr-script
         with:
