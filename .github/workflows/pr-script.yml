@@ -6,22 +6,23 @@ jobs:
   pr-script:
     runs-on: ubuntu-latest
     steps:
-      - uses: khan/pull-request-comment-trigger@1.0.0
-        id: check
-        with:
-          trigger: "auto run pre-commit"
-      - uses: actions/checkout@v2
+      # - uses: khan/pull-request-comment-trigger@1.0.0
+      #   id: check
+      #   with:
+      #     trigger: "auto run pre-commit"
+      # - uses: actions/checkout@v2
       - name: Print Issue Info
         run: |
-          echo "${{ github.event.issue.html_url }}"
-          echo "${{ github.event.issue.author_association }}"
-          echo "${{ github.event.issue.user.login }}"
-          echo "${{ github.event.issue.user.email }}"
-      - if: steps.check.outputs.triggered == 'true'
-        uses: ./.github/actions/pr-script
-        with:
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          pre_commit: true
-          commit_message: "auto run pre-commit"
-          target: ${{ github.event.issue.html_url }}
-          association: ${{ github.event.comment.author_association }}
+          echo "html_url ${{ github.event.issue.html_url }}"
+          echo "assoc ${{ github.event.issue.author_association }}"
+          echo "login ${{ github.event.issue.user.login }}"
+          echo "email ${{ github.event.issue.user.email }}"
+          echo "actor ${{ github.actor }}"
+      # - if: steps.check.outputs.triggered == 'true'
+      #   uses: ./.github/actions/pr-script
+      #   with:
+      #     token: ${{ secrets.PERSONAL_TOKEN }}
+      #     pre_commit: true
+      #     commit_message: "auto run pre-commit"
+      #     target: ${{ github.event.issue.html_url }}
+      #     association: ${{ github.event.comment.author_association }}
