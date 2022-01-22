@@ -34,19 +34,27 @@ def run(cmd, **kwargs):
         raise e
 
 
-def run_script(target, script, commit_message=""):
+def run_script(target, script, maintainer, commit_message=""):
     """Run a script on the target pull request URL"""
     # e.g. https://github.com/foo/bar/pull/81
-    print("Checking for authorized user")
-    association = os.environ.get("ASSOCIATION", "COLLABORATOR")
-    if association not in ["COLLABORATOR", "MEMBER", "OWNER"]:
-        raise ValueError(f"Cannot run for user with association {association}")
     print(f"Finding owner and repo for {target}")
     owner, repo = target.replace("https://github.com/", "").split("/")[:2]
     number = target.split("/")[-1]
     auth = os.environ["GITHUB_ACCESS_TOKEN"]
     print(f"Extracting PR {number} from {owner}/{repo}")
     gh = GhApi(owner=owner, repo=repo, token=auth)
+
+    print("Checking for authorized user")
+    association = os.environ.get("ASSOCIATION", "COLLABORATOR")
+    if association not in ["COLLABORATOR", "MEMBER", "OWNER"]:
+        msg = f"Cannot run script for user {maintainer} with association {association}"
+        gh.issues.create_comment(number, msg)
+        raise ValueError(msg)
+
+    # Give a confirmation message
+    msg = f"Running script \"{script}\" on behalf of {maintainer}"
+    gh.issues.create_comment(number, msg)
+
     # here we get the target owner and branch so we can check it out below
     pull = gh.pulls.get(number)
     user_name = pull.head.repo.owner.login
@@ -91,4 +99,4 @@ if __name__ == "__main__":
         script += ["pre-commit run --all-files"]
     print(f"Running script on {target}:")
     print(f"   {script}")
-    run_script(target, script, commit_message)
+    run_script(target, script, maintainer, commit_message)
