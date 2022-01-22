@@ -11,7 +11,7 @@ jobs:
         with:
           trigger: 'auto run pre-commit'
       - if: steps.check.outputs.triggered == 'true'
-        uses: jupyterlab/maintainer-tools/.github/actions/pr-script@v1
+        uses: ./.github/actions/pr-script
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           pre_commit: true
