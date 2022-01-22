@@ -20,4 +20,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           pre_commit: true
           commit_message: "auto run pre-commit"
-          target: $${{ github.event.issue.html_url }}
+          target: ${{ github.event.issue.html_url }}
