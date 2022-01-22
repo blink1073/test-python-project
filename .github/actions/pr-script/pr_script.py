@@ -37,6 +37,10 @@ def run(cmd, **kwargs):
 def run_script(target, script, commit_message=""):
     """Run a script on the target pull request URL"""
     # e.g. https://github.com/foo/bar/pull/81
+    print("Checking for authorized user")
+    association = os.environ.get('ASSOCIATION', 'COLLABORATOR')
+    if association not in ['COLLABORATOR', 'MEMBER', 'OWNER']:
+        raise ValueError(f"Cannot run for user with assocation {association}")
     print(f"Finding owner and repo for {target}")
     owner, repo = target.replace("https://github.com/", "").split("/")[:2]
     number = target.split("/")[-1]

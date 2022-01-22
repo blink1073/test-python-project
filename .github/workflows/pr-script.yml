@@ -11,7 +11,7 @@ jobs:
         with:
           trigger: "auto run pre-commit"
       - uses: actions/checkout@v2
-      - name: Print Issue Info Again 2
+      - name: Print Issue Info
         run: |
           echo "${{ github.event.issue.html_url }}"
           echo "${{ github.event.issue.author_association }}"
@@ -24,3 +24,4 @@ jobs:
           pre_commit: true
           commit_message: "auto run pre-commit"
           target: ${{ github.event.issue.html_url }}
+          association: ${{ github.event.issue.author_association }}
