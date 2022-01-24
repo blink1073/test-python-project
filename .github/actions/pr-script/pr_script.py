@@ -62,7 +62,7 @@ def run_script(target, script, maintainer, commit_message=""):
 
     if Path("./test").exists():
         shutil.rmtree("./test")
-    url = f"https://{auth}@github.com/{user_name}/{repo}"
+    url = f"https://empty:{auth}@github.com/{user_name}/{repo}"
     run(f"git clone {url} -b {branch} test")
     os.chdir("test")
     run("pip install -e '.[test]'")
