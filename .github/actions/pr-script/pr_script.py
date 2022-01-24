@@ -52,7 +52,7 @@ def run_script(target, script, maintainer, commit_message=""):
         raise ValueError(msg)
 
     # Give a confirmation message
-    msg = f"Running script \"{script}\" on behalf of \"{maintainer}\""
+    msg = f'Running script "{script}" on behalf of "{maintainer}"'
     gh.issues.create_comment(number, msg)
 
     # here we get the target owner and branch so we can check it out below
