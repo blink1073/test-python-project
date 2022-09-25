@@ -42,7 +42,5 @@ setup(
     long_description_content_type="text/markdown",
     author="blink1073",
     packages=find_packages(exclude=["tests", ".github"]),
-    install_requires=read_requirements("requirements.txt"),
     entry_points={"console_scripts": [console_script]},
-    extras_require={"test": read_requirements("requirements-test.txt")},
 )
