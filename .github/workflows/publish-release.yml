@@ -13,7 +13,7 @@ on:
         required: false
 
 jobs:
-  full_release:
+  publish_release:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
@@ -71,3 +71,4 @@ jobs:
           echo "## Failure Message" >> $GITHUB_STEP_SUMMARY
           echo ":x: Failed to Publish the Draft Release Url:" >> $GITHUB_STEP_SUMMARY
           echo ${{ steps.populate-release.outputs.release_url }} >> $GITHUB_STEP_SUMMARY
+          echo "Fix credentials and run 'Publish Release' workflow again" >> $GITHUB_STEP_SUMMARY
