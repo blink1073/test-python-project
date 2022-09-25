@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+    "hatchling>=1.10.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "test-python-project"
+dynamic = [
+    "version",
+]
+description = "Awesome test_python_project created by blink1073"
+readme = "README.md"
+license = ""
+authors = [
+    { name = "blink1073" },
+]
+
+[project.scripts]
+test_python_project = "test_python_project.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/blink1073/test-python-project/"
+
+[tool.hatch.version]
+path = "test_python_project/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/test_python_project",
+]
