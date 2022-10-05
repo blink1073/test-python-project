@@ -18,6 +18,8 @@ on:
         type: boolean
 jobs:
   prep_release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
