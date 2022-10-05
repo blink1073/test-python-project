@@ -2,7 +2,7 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
-## 0.1.8
+## 0.1.9
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.6...05be3a3ec805b7951892b02911a4589bc27cf68f))
 
@@ -18,6 +18,21 @@
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-09-25..2022-10-05&type=Issues)
 
 <!-- <END NEW CHANGELOG ENTRY> -->
+
+## 0.1.8
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.6...05be3a3ec805b7951892b02911a4589bc27cf68f))
+
+### Maintenance and upkeep improvements
+
+- Add content write perms [#16](https://github.com/blink1073/test-python-project/pull/16) ([@blink1073](https://github.com/blink1073))
+- try using workflow dispatch token [#15](https://github.com/blink1073/test-python-project/pull/15) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-09-25&to=2022-10-05&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-09-25..2022-10-05&type=Issues)
 
 ## 0.1.7
 
