@@ -42,7 +42,7 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           TWINE_USERNAME: __token__
           TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
-        uses: blink1073jupyter_releaser/.github/actions/finalize-release@ensure-admin
+        uses: blink1073/jupyter_releaser/.github/actions/finalize-release@ensure-admin
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ github.repository }}
