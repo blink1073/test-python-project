@@ -2,6 +2,27 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.10
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.9...c42bcac60a760a1e1c7741ca86eab4bd9fc6487a))
+
+### Maintenance and upkeep improvements
+
+- Test usage of git actor [#17](https://github.com/blink1073/test-python-project/pull/17) ([@blink1073](https://github.com/blink1073))
+
+### Other merged PRs
+
+- try again [#19](https://github.com/blink1073/test-python-project/pull/19) ([@blink1073](https://github.com/blink1073))
+- fix repo [#18](https://github.com/blink1073/test-python-project/pull/18) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-10-05&to=2022-10-06&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-10-05..2022-10-06&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.9
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.6...05be3a3ec805b7951892b02911a4589bc27cf68f))
@@ -16,8 +37,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-09-25&to=2022-10-05&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-09-25..2022-10-05&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.8
 
