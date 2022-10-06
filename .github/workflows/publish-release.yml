@@ -24,11 +24,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup
-        uses: blink1073/jupyter-releaser/.github/actions/common@ensure-admin
+        uses: blink1073/jupyter_releaser/.github/actions/common@ensure-admin
 
       - name: Populate Release
         id: populate-release
-        uses: blink1073/jupyter-releaser/.github/actions/populate-release@ensure-admin
+        uses: blink1073/jupyter_releaser/.github/actions/populate-release@ensure-admin
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ github.repository }}
@@ -42,7 +42,7 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           TWINE_USERNAME: __token__
           TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
-        uses: blink1073jupyter-releaser/.github/actions/finalize-release@ensure-admin
+        uses: blink1073jupyter_releaser/.github/actions/finalize-release@ensure-admin
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ github.repository }}
