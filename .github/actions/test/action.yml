@@ -1,0 +1,8 @@
+name: "Test"
+description: "Test some stuff"
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        echo ${{ github.actor }}
+        echo ${{ github.event }}

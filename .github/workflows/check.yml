@@ -7,4 +7,5 @@ on:
 jobs:
   # Run "pre-commit run --all-files"
   test:
-    uses: ./.github/actions/test
+    - uses: actions/checkout@v2
+    - uses: ./.github/actions/test
