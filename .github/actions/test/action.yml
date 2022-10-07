@@ -11,5 +11,5 @@ runs:
       run: |
         echo ${{ github.triggering_actor }}
         pip install ghapi
-        export GITHUB_ACCESS_TOKEN=${{ inputs.token }}
+        export GITHUB_TOKEN=${{ inputs.token }}
         ACTOR=${{ github.triggering_actor }} python ${{ github.action_path }}/test.py
