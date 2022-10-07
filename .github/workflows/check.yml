@@ -7,5 +7,7 @@ on:
 jobs:
   # Run "pre-commit run --all-files"
   test:
-    - uses: actions/checkout@v2
-    - uses: ./.github/actions/test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/test
