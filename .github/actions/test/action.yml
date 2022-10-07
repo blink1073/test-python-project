@@ -1,9 +1,15 @@
 name: "Test"
 description: "Test some stuff"
+inputs:
+  token:
+    description: GitHub Access Token
+    required: true
 runs:
   using: "composite"
   steps:
     - shell: bash
       run: |
-        echo ${{ github.actor }}
-        echo ${{ github.event }}
+        echo ${{ github.triggering_actor }}
+        pip install ghapi
+        export GITHUB_ACCESS_TOKEN=${{ inputs.token }}
+        ACTOR=${{ github.triggering_actor }} python ${{ github.action_path }}/test.py
