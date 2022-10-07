@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.12
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.11...1363bbc0694cef4f3539475d51e7a27d11ac65ba))
+
+### Maintenance and upkeep improvements
+
+- Add check release and enforce label [#21](https://github.com/blink1073/test-python-project/pull/21) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-10-07&to=2022-10-07&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-10-07..2022-10-07&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.11
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.10...b42d55b0e1569abd7f8c881a93ed20ed4249da0e))
@@ -15,8 +31,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-10-06&to=2022-10-07&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-10-06..2022-10-07&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.10
 
