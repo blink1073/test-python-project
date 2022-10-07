@@ -3,6 +3,7 @@ description: "Test some stuff"
 runs:
   using: "composite"
   steps:
-    - run: |
+    - shell: bash
+      run: |
         echo ${{ github.actor }}
         echo ${{ github.event }}
