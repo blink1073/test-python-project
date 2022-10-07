@@ -2,6 +2,22 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.11
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.10...b42d55b0e1569abd7f8c881a93ed20ed4249da0e))
+
+### Merged PRs
+
+- test action [#20](https://github.com/blink1073/test-python-project/pull/20) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-10-06&to=2022-10-07&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-10-06..2022-10-07&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.10
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.9...c42bcac60a760a1e1c7741ca86eab4bd9fc6487a))
@@ -20,8 +36,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-10-05&to=2022-10-06&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-10-05..2022-10-06&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.9
 
