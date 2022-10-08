@@ -22,6 +22,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+      - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Prep Release
         id: prep-release
         uses: jupyter-server/jupyter_releaser/.github/actions/prep-release@v2
