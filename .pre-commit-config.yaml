@@ -1,0 +1,54 @@
+default_language_version:
+  node: system
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: requirements-txt-fixer
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: debug-statements
+      - id: forbid-new-submodules
+      - id: check-builtin-literals
+      - id: trailing-whitespace
+
+  - repo: https://github.com/psf/black
+    rev: 22.8.0
+    hooks:
+      - id: black
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        files: \.py$
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.38.2
+    hooks:
+      - id: pyupgrade
+        args: [--py37-plus]
+
+  - repo: https://github.com/PyCQA/doc8
+    rev: v1.0.0
+    hooks:
+      - id: doc8
+        args: [--max-line-length=200]
+        exclude: docs/source/other/full-config.rst
+        stages: [manual]
+
+  - repo: https://github.com/sirosen/check-jsonschema
+    rev: 0.18.3
+    hooks:
+      - id: check-jsonschema
+        name: "Check GitHub Workflows"
+        files: ^\.github/workflows/
+        types: [yaml]
+        args: ["--schemafile", "https://json.schemastore.org/github-workflow"]
+        stages: [manual]
