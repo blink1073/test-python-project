@@ -1,7 +1,6 @@
 import argparse  # pragma: no cover
 
-from . import base_function
-from . import BaseClass
+from . import BaseClass, base_function
 
 
 def main() -> None:  # pragma: no cover
