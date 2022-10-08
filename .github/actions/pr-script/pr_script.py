@@ -3,9 +3,7 @@ import os
 import shlex
 import shutil
 from pathlib import Path
-from subprocess import CalledProcessError
-from subprocess import check_output
-from subprocess import PIPE
+from subprocess import PIPE, CalledProcessError, check_output
 
 from ghapi.core import GhApi
 
