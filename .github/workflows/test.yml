@@ -10,10 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          set -eux
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           git config user.email blink1073@users.noreply.github.com
           git config user.name "Test User"
-          ifconfig | perl -nle 's/dr:(\S+)/print $1/e'
+          ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
           #git checkout -b test6
           #touch foo4.txt
           #git add .
