@@ -7,7 +7,6 @@ jobs:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
-    environment: test
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -20,6 +19,6 @@ jobs:
           git commit -a -m "test"
           git push origin test6
           gh pr create --fill
-          gh pr merge --squash https://github.com/blink1073/test-python-project/pull/37
-          git tag vtest2
+          gh pr merge --squash https://github.com/blink1073/test-python-project/pull/38
+          git tag vtest3
           git push origin --tags
