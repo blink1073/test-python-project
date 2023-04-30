@@ -3,8 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   prep_release:
-    permissions:
-      contents: write
+    permissions: write-all
     runs-on: ubuntu-latest
     environment: test
     steps:
