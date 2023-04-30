@@ -14,7 +14,7 @@ jobs:
           git config user.email blink1073@users.noreply.github.com
           git config user.name "Test User"
           git checkout -b test6
-          touch foo3.txt
+          touch foo4.txt
           git add .
           git commit -a -m "test"
           git push origin test6
