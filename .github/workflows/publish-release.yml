@@ -17,6 +17,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Populate Release
