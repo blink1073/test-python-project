@@ -12,5 +12,11 @@ jobs:
       - run: |
           git config user.email blink1073@users.noreply.github.com
           git config user.name "Test User"
-          git tag vtest
+          git checkout -b test
+          touch foo.txt
+          git add .
+          git commit -a -m "test"
+          gh pr create --fill
+          gh pr merge https://github.com/blink1073/test-python-project/pull/31
+          git tag vtest2
           git push origin --tags
