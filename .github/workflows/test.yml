@@ -21,6 +21,6 @@ jobs:
           git commit -a -m "test"
           git push origin test
           gh pr create --fill
-          gh pr merge https://github.com/blink1073/test-python-project/pull/31
+          gh pr merge https://github.com/blink1073/test-python-project/pull/33
           git tag vtest2
           git push origin --tags
