@@ -6,6 +6,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v2
       - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
