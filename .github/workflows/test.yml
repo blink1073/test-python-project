@@ -14,7 +14,7 @@ jobs:
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           git config user.email blink1073@users.noreply.github.com
           git config user.name "Test User"
-          ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'
+          ip route get 8.8.8.8 | sed -n '/src/{s/.*src *\([^ ]*\).*/\1/p;q}'
           #git checkout -b test6
           #touch foo4.txt
           #git add .
