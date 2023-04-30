@@ -1,0 +1,18 @@
+name: "Test"
+on:
+  workflow_dispatch:
+jobs:
+  prep_release:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+      - run: |
+          touch foo.txt
+          git remote add origin https://github.com/blink1073/test-python-project
+          git config user.email blink1073@users.noreply.github.com
+          git config user.name "Test User"
+          git add foo.txt
+          git commit -a -m "test add"
+          git push origin main
