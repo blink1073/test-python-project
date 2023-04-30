@@ -23,12 +23,6 @@ repos:
     hooks:
       - id: black
 
-  - repo: https://github.com/PyCQA/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
-        files: \.py$
-
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.38.2
     hooks:
