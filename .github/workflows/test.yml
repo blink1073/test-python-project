@@ -13,12 +13,13 @@ jobs:
           export GH_TOKEN=${{ secrets.GITHUB_TOKEN }}
           git config user.email blink1073@users.noreply.github.com
           git config user.name "Test User"
-          git checkout -b test6
-          touch foo4.txt
-          git add .
-          git commit -a -m "test"
-          git push origin test6
-          gh pr create --fill
-          gh pr merge --squash https://github.com/blink1073/test-python-project/pull/38
-          git tag vtest3
-          git push origin --tags
+          ifconfig | perl -nle 's/dr:(\S+)/print $1/e'
+          #git checkout -b test6
+          #touch foo4.txt
+          #git add .
+          #git commit -a -m "test"
+          #git push origin test6
+          #gh pr create --fill
+          #gh pr merge --squash https://github.com/blink1073/test-python-project/pull/38
+          #git tag vtest3
+          #git push origin --tags
