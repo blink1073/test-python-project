@@ -18,7 +18,7 @@ jobs:
           touch foo3.txt
           git add .
           git commit -a -m "test"
-          gh pr create --fill --head
+          gh pr create --fill --head test
           gh pr merge https://github.com/blink1073/test-python-project/pull/31
           git tag vtest2
           git push origin --tags
