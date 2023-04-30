@@ -14,6 +14,5 @@ jobs:
           touch foo.txt
           git config user.email blink1073@users.noreply.github.com
           git config user.name "Test User"
-          git add foo.txt
-          git commit -a -m "test add"
-          git push origin main
+          git tag test-tag
+          git push origin main --tags
