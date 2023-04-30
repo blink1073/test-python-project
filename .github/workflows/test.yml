@@ -8,10 +8,9 @@ jobs:
     environment: test
     steps:
       - uses: actions/checkout@v2
-      - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
-      - run: |
-          touch foo.txt
-          git config user.email blink1073@users.noreply.github.com
-          git config user.name "Test User"
-          git tag test-tag
-          git push origin main --tags
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.61.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: patch
+          WITH_V: "true"
