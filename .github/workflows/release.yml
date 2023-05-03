@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-        pip install build
-        python -m build .
+          pip install build
+          python -m build .
       - uses: actions/upload-artifact@v2
         with:
           name: dist
