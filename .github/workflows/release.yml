@@ -1,3 +1,7 @@
+name: "Publish Release"
+on:
+  workflow_dispatch:
+  
 jobs:
   make-dist:
     name: Make dist
