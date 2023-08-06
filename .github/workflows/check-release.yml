@@ -17,6 +17,6 @@ jobs:
         run: |
           pip install -e .
       - name: Check Release
-        uses: blink1073/jupyter_releaser/.github/actions/check-release@@use-pr-for-changes
+        uses: blink1073/jupyter_releaser/.github/actions/check-release@use-pr-for-changes
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
