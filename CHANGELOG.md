@@ -2,6 +2,30 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.17
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.16...11886ebb0b9c7574cf205c379c1f8f1d5de29531))
+
+### Maintenance and upkeep improvements
+
+- use pr for publish workflow [#40](https://github.com/blink1073/test-python-project/pull/40) ([@blink1073](https://github.com/blink1073))
+
+### Other merged PRs
+
+- Revert "Release 0.1.17" [#50](https://github.com/blink1073/test-python-project/pull/50) ([@blink1073](https://github.com/blink1073))
+- Revert "Release 0.1.17" [#48](https://github.com/blink1073/test-python-project/pull/48) ([@blink1073](https://github.com/blink1073))
+- Revert "Release 0.1.17" [#46](https://github.com/blink1073/test-python-project/pull/46) ([@blink1073](https://github.com/blink1073))
+- add required perms [#41](https://github.com/blink1073/test-python-project/pull/41) ([@blink1073](https://github.com/blink1073))
+- try trusted publishing [#39](https://github.com/blink1073/test-python-project/pull/39) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-05-03&to=2023-08-06&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-05-03..2023-08-06&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-05-03..2023-08-06&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.15
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.14...79c9cc91a949b4c60c7ca1901a5f05d21212bcd8))
@@ -15,8 +39,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2022-10-08&to=2022-10-08&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2022-10-08..2022-10-08&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.14
 
