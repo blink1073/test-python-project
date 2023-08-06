@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   prep_release:
-    permissions: 
+    permissions:
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
