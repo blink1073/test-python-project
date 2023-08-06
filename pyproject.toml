@@ -11,7 +11,7 @@ dynamic = [
 ]
 description = "Awesome test_python_project created by blink1073"
 readme = "README.md"
-license = ""
+license = { file = "LICENSE" }
 authors = [
     { name = "blink1073" },
 ]
