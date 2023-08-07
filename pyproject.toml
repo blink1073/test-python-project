@@ -29,3 +29,6 @@ path = "test_python_project/__init__.py"
 include = [
     "/test_python_project",
 ]
+
+[tool.jupyter-releaser.options]
+post-version-spec = "dev"
