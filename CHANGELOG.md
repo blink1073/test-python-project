@@ -13,11 +13,6 @@
 ### Other merged PRs
 
 - Revert "Release 0.1.17" [#52](https://github.com/blink1073/test-python-project/pull/52) ([@blink1073](https://github.com/blink1073))
-- Revert "Release 0.1.17" [#50](https://github.com/blink1073/test-python-project/pull/50) ([@blink1073](https://github.com/blink1073))
-- Revert "Release 0.1.17" [#48](https://github.com/blink1073/test-python-project/pull/48) ([@blink1073](https://github.com/blink1073))
-- Revert "Release 0.1.17" [#46](https://github.com/blink1073/test-python-project/pull/46) ([@blink1073](https://github.com/blink1073))
-- add required perms [#41](https://github.com/blink1073/test-python-project/pull/41) ([@blink1073](https://github.com/blink1073))
-- try trusted publishing [#39](https://github.com/blink1073/test-python-project/pull/39) ([@blink1073](https://github.com/blink1073))
 
 ### Contributors to this release
 
