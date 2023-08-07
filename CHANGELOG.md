@@ -2,6 +2,33 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.21
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.16...8e5812f69c5272e357d07f53b4b6f93ce6d5dc88))
+
+### Maintenance and upkeep improvements
+
+- use pr for publish workflow [#40](https://github.com/blink1073/test-python-project/pull/40) ([@blink1073](https://github.com/blink1073))
+
+### Other merged PRs
+
+- Revert "Release 0.1.20" [#59](https://github.com/blink1073/test-python-project/pull/59) ([@blink1073](https://github.com/blink1073))
+- Update CHANGELOG.md [#57](https://github.com/blink1073/test-python-project/pull/57) ([@blink1073](https://github.com/blink1073))
+- Revert "Release 0.1.17" [#52](https://github.com/blink1073/test-python-project/pull/52) ([@blink1073](https://github.com/blink1073))
+- Revert "Release 0.1.17" [#50](https://github.com/blink1073/test-python-project/pull/50) ([@blink1073](https://github.com/blink1073))
+- Revert "Release 0.1.17" [#48](https://github.com/blink1073/test-python-project/pull/48) ([@blink1073](https://github.com/blink1073))
+- Revert "Release 0.1.17" [#46](https://github.com/blink1073/test-python-project/pull/46) ([@blink1073](https://github.com/blink1073))
+- add required perms [#41](https://github.com/blink1073/test-python-project/pull/41) ([@blink1073](https://github.com/blink1073))
+- try trusted publishing [#39](https://github.com/blink1073/test-python-project/pull/39) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-05-03&to=2023-08-07&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-05-03..2023-08-07&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-05-03..2023-08-07&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.20
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.16...e7bb17dddae7487a1c301c494205ebbbbfde3898))
@@ -26,8 +53,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-05-03&to=2023-08-07&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-05-03..2023-08-07&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-05-03..2023-08-07&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.19
 
