@@ -24,6 +24,7 @@ Homepage = "https://github.com/blink1073/test-python-project/"
 
 [tool.hatch.version]
 path = "test_python_project/__init__.py"
+validate-bump = false
 
 [tool.hatch.build.targets.sdist]
 include = [
