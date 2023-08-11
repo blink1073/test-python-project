@@ -2,6 +2,26 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.23
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.21...cd62ff69a176e5e7e1ae7354d440a243ee26ec0b))
+
+### Maintenance and upkeep improvements
+
+### Other merged PRs
+
+- Update pyproject.toml [#65](https://github.com/blink1073/test-python-project/pull/65) ([@blink1073](https://github.com/blink1073))
+- Update foo4.txt [#64](https://github.com/blink1073/test-python-project/pull/64) ([@blink1073](https://github.com/blink1073))
+- Use dev version [#62](https://github.com/blink1073/test-python-project/pull/62) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-07&to=2023-08-11&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-07..2023-08-11&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-07..2023-08-11&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.22
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.21...f4117aac904a9aea11bd787754831878cf08232a))
@@ -17,8 +37,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-07&to=2023-08-07&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-07..2023-08-07&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-07..2023-08-07&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.21
 
