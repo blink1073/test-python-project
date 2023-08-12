@@ -15,6 +15,7 @@ on:
 jobs:
   publish_release:
     permissions:
+      checks: write
       contents: write
       pull-requests: write
     runs-on: ubuntu-latest
