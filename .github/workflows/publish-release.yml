@@ -14,10 +14,7 @@ on:
 
 jobs:
   publish_release:
-    permissions:
-      checks: write
-      contents: write
-      pull-requests: write
+    permissions: write-all
     runs-on: ubuntu-latest
     environment: test
     steps:
