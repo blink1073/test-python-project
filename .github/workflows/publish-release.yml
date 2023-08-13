@@ -24,6 +24,7 @@ jobs:
         uses: blink1073/jupyter_releaser/.github/actions/populate-release@use-pr-for-changes
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           target: ${{ github.repository }}
           branch: ${{ github.event.inputs.branch }}
           release_url: ${{ github.event.inputs.release_url }}
