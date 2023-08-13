@@ -2,6 +2,27 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.24
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.23...46496288a1b541cf8e17063fa27f2fdfe1fabc52))
+
+### Maintenance and upkeep improvements
+
+### Other merged PRs
+
+- Update publish-release.yml [#80](https://github.com/blink1073/test-python-project/pull/80) ([@blink1073](https://github.com/blink1073))
+- Update publish-release.yml [#77](https://github.com/blink1073/test-python-project/pull/77) ([@blink1073](https://github.com/blink1073))
+- Update publish-release.yml [#75](https://github.com/blink1073/test-python-project/pull/75) ([@blink1073](https://github.com/blink1073))
+- Update foo4.txt [#67](https://github.com/blink1073/test-python-project/pull/67) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-11&to=2023-08-13&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-11..2023-08-13&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-11..2023-08-13&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.23
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.21...cd62ff69a176e5e7e1ae7354d440a243ee26ec0b))
@@ -19,8 +40,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-07&to=2023-08-11&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-07..2023-08-11&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-07..2023-08-11&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.22
 
