@@ -2,6 +2,30 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.26
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.23...89758fc858b487cfcf0d98711810924e71793fc6))
+
+### Maintenance and upkeep improvements
+
+- \[ci skip\] Release 0.1.25 [#84](https://github.com/blink1073/test-python-project/pull/84) ([@blink1073](https://github.com/blink1073))
+- \[ci skip\] Release 0.1.24 [#83](https://github.com/blink1073/test-python-project/pull/83) ([@blink1073](https://github.com/blink1073))
+
+### Other merged PRs
+
+- Update publish-release.yml [#80](https://github.com/blink1073/test-python-project/pull/80) ([@blink1073](https://github.com/blink1073))
+- Update publish-release.yml [#77](https://github.com/blink1073/test-python-project/pull/77) ([@blink1073](https://github.com/blink1073))
+- Update publish-release.yml [#75](https://github.com/blink1073/test-python-project/pull/75) ([@blink1073](https://github.com/blink1073))
+- Update foo4.txt [#67](https://github.com/blink1073/test-python-project/pull/67) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-11&to=2023-08-13&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-11..2023-08-13&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-11..2023-08-13&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.25
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.23...c3e815f2e9cf52bad590e0e2670fefd119c38391))
@@ -22,8 +46,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-11&to=2023-08-13&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-11..2023-08-13&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-11..2023-08-13&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.24
 
