@@ -1,1 +1,1 @@
-echo "test pr comment" > test.txt
+echo "test pr comment modified" > test.txt
