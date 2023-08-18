@@ -9,7 +9,7 @@ jobs:
         pull-requests: write
         issues: write
     steps:
-    - uses: actions/setup-go@v4
+    - uses: actions/checkout@v2
     - name: Find Comment
       uses: peter-evans/find-comment@v2
       id: fc
