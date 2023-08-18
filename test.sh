@@ -1,1 +1,1 @@
-echo "test pr comment modified" > test.txt
+exit 1
