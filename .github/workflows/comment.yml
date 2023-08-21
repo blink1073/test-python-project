@@ -1,6 +1,6 @@
 name: Test PR Comment
 on:
-  pull_request_target:
+  pull_request:
 
 jobs:
   comment:
@@ -21,9 +21,11 @@ jobs:
     - name: Create the comment body
       run: |
         bash test.sh
+
     - name: Create or update comment
       uses: peter-evans/create-or-update-comment@v3
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         comment-id: ${{ steps.fc.outputs.comment-id }}
         issue-number: ${{ github.event.pull_request.number }}
         body-path: 'test.txt'
