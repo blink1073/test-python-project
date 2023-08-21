@@ -5,9 +5,7 @@ on:
 jobs:
   comment:
     runs-on: ubuntu-latest
-    permissions:
-        pull-requests: write
-        issues: write
+    permissions: write-all
     steps:
     - uses: actions/checkout@v2
     - name: Find Comment
