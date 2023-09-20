@@ -2,7 +2,7 @@
 
 sha=$1
 base=v1
-target=master
+target=main
 dirname=$(mktemp -d)
 user=$(git config github.user)
 
