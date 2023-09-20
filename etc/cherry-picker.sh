@@ -14,19 +14,19 @@ if [ -z "$user" ]; then
 fi
 
 mkdir -p $dirname
-if [ -z $GITHUB_TOKEN ]; then
+if [ -z $AUTH_TOKEN ]; then
     git clone git@github.com:blink1073/test-python-project.git $dirname
 else
-    echo "$GITHUB_TOKEN" > mytoken.txt
+    echo "$AUTH_TOKEN" > mytoken.txt
     gh auth login --with-token < mytoken.txt
     git clone https://github.com/blink1073/test-python-project.git $dirname
 fi
 
 cd $dirname
-if [ -z $GITHUB_TOKEN ]; then
+if [ -z $AUTH_TOKEN ]; then
     git remote add $user git@github.com:$user/test-python-project.git
 else
-    git remote add $user https://$user:${GITHUB_TOKEN}@github.com/$user/test-python-project.git
+    git remote add $user https://$user:${AUTH_TOKEN}@github.com/$user/test-python-project.git
 fi
 
 gh repo set-default blink1073/test-python-project
