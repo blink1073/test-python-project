@@ -14,7 +14,7 @@ if [ -z "$user" ]; then
 fi
 
 mkdir -p $dirname
-if [ -z $AUTH_TOKEN ]; then
+if [ -z $GITHUB_ACTOR ]; then
     git clone git@github.com:blink1073/test-python-project.git $dirname
 else
     echo "$AUTH_TOKEN" > mytoken.txt
@@ -23,7 +23,7 @@ else
 fi
 
 cd $dirname
-if [ -z $AUTH_TOKEN ]; then
+if [ -z $GITHUB_ACTOR ]; then
     git remote add $user git@github.com:$user/test-python-project.git
 else
     git remote add $user https://$user:${AUTH_TOKEN}@github.com/$user/test-python-project.git
@@ -53,7 +53,13 @@ echo "Base: $target"
 echo "Head: $head"
 echo
 
-read -p 'Push changes? (Y/n) ' choice
+
+if [ -n $GITHUB_ACTOR ]; then
+    choice=Y
+else
+    read -p 'Push changes? (Y/n) ' choice
+fi
+
 if [[ "$choice" == "Y" || "$choice" == "y" || -z "$choice" ]]; then
     if [ -n $user ]; then
         git push $user
