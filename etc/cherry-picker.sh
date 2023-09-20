@@ -14,21 +14,21 @@ fi
 
 mkdir -p $dirname
 if [ -z $GITHUB_TOKEN ]; then
-    git clone git@github.com:mongodb/mongo-go-driver.git $dirname
+    git clone git@github.com:blink1073/test-python-project.git $dirname
 else
     echo "$GITHUB_TOKEN" > mytoken.txt
     gh auth login --with-token < mytoken.txt
-    git clone https://github.com/mongodb/mongo-go-driver.git $dirname
+    git clone https://github.com/blink1073/test-python-project.git $dirname
 fi
 
 cd $dirname
 if [ -z $GITHUB_TOKEN ]; then
-    git remote add $user git@github.com:$user/mongo-go-driver.git
+    git remote add $user git@github.com:$user/test-python-project.git
 else
-    git remote add $user https://github.com/$user/mongo-go-driver.git
+    git remote add $user https://github.com/$user/test-python-project.git
 fi
 
-gh repo set-default mongodb/mongo-go-driver
+gh repo set-default blink1073/test-python-project
 branch="cherry-pick-$sha"
 head="$user:$branch"
 git fetch origin $base
