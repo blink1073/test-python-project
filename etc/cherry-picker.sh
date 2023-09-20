@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 sha=$1
 base=v1
