@@ -25,7 +25,7 @@ cd $dirname
 if [ -z $GITHUB_TOKEN ]; then
     git remote add $user git@github.com:$user/test-python-project.git
 else
-    git remote add $user https://github.com/$user/test-python-project.git
+    git remote add $user https://$user:${GITHUB_TOKEN}@github.com/$user/test-python-project.git
 fi
 
 gh repo set-default blink1073/test-python-project
