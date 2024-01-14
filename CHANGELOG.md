@@ -2,6 +2,32 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.1.31
+
+([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.30...ea6fd9f82b0184f06e94ab00e44a06ef919fbc25))
+
+### Maintenance and upkeep improvements
+
+- simple test [#93](https://github.com/blink1073/test-python-project/pull/93) ([@blink1073](https://github.com/blink1073))
+- \[ci skip\] Release 0.1.30 [#90](https://github.com/blink1073/test-python-project/pull/90) ([@blink1073](https://github.com/blink1073))
+
+### Other merged PRs
+
+- try a PR sync tool [#99](https://github.com/blink1073/test-python-project/pull/99) ([@blink1073](https://github.com/blink1073))
+- allow write all [#98](https://github.com/blink1073/test-python-project/pull/98) ([@blink1073](https://github.com/blink1073))
+- try again [#96](https://github.com/blink1073/test-python-project/pull/96) ([@blink1073](https://github.com/blink1073))
+- modify the comment [#94](https://github.com/blink1073/test-python-project/pull/94) ([@blink1073](https://github.com/blink1073))
+- simple test [#92](https://github.com/blink1073/test-python-project/pull/92) ([@blink1073](https://github.com/blink1073))
+- test PR comment handling [#91](https://github.com/blink1073/test-python-project/pull/91) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-14&to=2024-01-14&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-14..2024-01-14&type=Issues) | [@github-actions](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Agithub-actions+updated%3A2023-08-14..2024-01-14&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.1.30
 
 ([Full Changelog](https://github.com/blink1073/test-python-project/compare/v0.1.27...5f58663a5d7592e4485e0dbf5bf14f82b3f0e3d2))
@@ -17,8 +43,6 @@
 ([GitHub contributors page for this release](https://github.com/blink1073/test-python-project/graphs/contributors?from=2023-08-14&to=2023-08-14&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ablink1073%2Ftest-python-project+involves%3Ablink1073+updated%3A2023-08-14..2023-08-14&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.1.29
 
