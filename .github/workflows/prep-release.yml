@@ -19,13 +19,14 @@ on:
 jobs:
   prep_release:
     permissions:
+      pull-requests: write
       contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Prep Release
         id: prep-release
-        uses: blink1073/jupyter_releaser/.github/actions/prep-release@use-pr-for-changes
+        uses: blink1073/jupyter_releaser/.github/actions/prep-release@no-admin-token
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version_spec: ${{ github.event.inputs.version_spec }}

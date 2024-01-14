@@ -15,18 +15,19 @@ on:
 jobs:
   publish_release:
     permissions:
+      id-token: write
       pull-requests: write
       contents: write
+      issues: write
     runs-on: ubuntu-latest
     environment: test
     steps:
       - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
       - name: Populate Release
         id: populate-release
-        uses: blink1073/jupyter_releaser/.github/actions/populate-release@use-pr-for-changes
+        uses: blink1073/jupyter_releaser/.github/actions/populate-release@no-admin-token
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           target: ${{ github.repository }}
           branch: ${{ github.event.inputs.branch }}
           release_url: ${{ github.event.inputs.release_url }}
@@ -38,10 +39,9 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           TWINE_USERNAME: __token__
           TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
-        uses: blink1073/jupyter_releaser/.github/actions/finalize-release@use-pr-for-changes
+        uses: blink1073/jupyter_releaser/.github/actions/finalize-release@no-admin-token
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          personal_access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           target: ${{ github.repository }}
           release_url: ${{ steps.populate-release.outputs.release_url }}
 
