@@ -16,6 +16,9 @@ jobs:
   publish_release:
     permissions:
       id-token: write
+      pull-requests: write
+      contents: write
+      issues: write
     runs-on: ubuntu-latest
     environment: test
     steps:
