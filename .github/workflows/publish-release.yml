@@ -41,7 +41,7 @@ jobs:
           steps_to_skip: ${{ github.event.inputs.steps_to_skip }}}
 
       - name: Finalize Release
-        id: finalize-releadse
+        id: finalize-release
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           TWINE_USERNAME: __token__
