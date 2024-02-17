@@ -28,7 +28,7 @@ jobs:
 
       - name: Populate Release
         id: populate-release
-        uses: jupyter-server/jupyter_releaser/.github/actions/populate-release@v1
+        uses: jupyter-server/jupyter_releaser/.github/actions/populate-release@v2
         with:
           token: ${{ steps.generate-token.outputs.token }}
           target: ${{ github.repository }}
@@ -52,7 +52,7 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           TWINE_USERNAME: __token__
           TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
-        uses: jupyter-server/jupyter_releaser/.github/actions/finalize-release@v1
+        uses: jupyter-server/jupyter_releaser/.github/actions/finalize-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target: ${{ github.repository }}
