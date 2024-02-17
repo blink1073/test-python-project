@@ -1,0 +1,27 @@
+name: "Push a commit"
+on:
+  workflow_dispatch:
+
+jobs:
+  push_commit:
+    runs-on: ubuntu-latest
+    environment: release
+    steps:
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          token: ${{ steps.generate-token.outputs.token }}
+
+      - run: echo "$MULTILINE_JSON_STRING" > test.txt
+
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
