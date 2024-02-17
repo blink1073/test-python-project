@@ -30,18 +30,27 @@ jobs:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - name: Finalize Release
-        id: finalize-release
-        env:
-          # The following are needed if you use legacy PyPI set up
-          # PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-          # PYPI_TOKEN_MAP: ${{ secrets.PYPI_TOKEN_MAP }}
-          # TWINE_USERNAME: __token__
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        uses: jupyter-server/jupyter_releaser/.github/actions/finalize-release@v2
+      - name: Populate Release
+        id: populate-release
+        uses: jupyterlab/maintainer-tools/.github/actions/populate-release@v1
         with:
           token: ${{ steps.generate-token.outputs.token }}
+          target: ${{ github.repository }}
+          branch: ${{ github.event.inputs.branch }}
           release_url: ${{ github.event.inputs.release_url }}
+          steps_to_skip: ${{ github.event.inputs.steps_to_skip }}}
+
+      - name: Finalize Release
+        id: finalize-releadse
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+          TWINE_USERNAME: __token__
+          TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
+        uses: jupyterlab/maintainer-tools/.github/actions/finalize-release@v1
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          target: ${{ github.repository }}
+          release_url: ${{ steps.populate-release.outputs.release_url }}
 
       - name: "** Next Step **"
         if: ${{ success() }}
