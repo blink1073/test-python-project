@@ -1,4 +1,4 @@
-name: "Push a tag"
+name: "Push a commit"
 on:
   workflow_dispatch:
 
@@ -7,20 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     environment: release
     steps:
-      - name: Generate a token
-        id: generate-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
-
       - uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          token: ${{ steps.generate-token.outputs.token }}
 
-      - name: Tag snapshot
-        uses: tvdias/github-tagger@v0.0.1
+      - run: |
+          git checkout main
+          echo "hello again!" > test.txt
+
+      - uses: EndBug/add-and-commit@v9
         with:
-          repo-token: ${{ steps.generate-token.outputs.token }}
-          tag: test
+          default_author: github_actions
