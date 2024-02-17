@@ -21,7 +21,7 @@ jobs:
 
       - run: |
           git checkout main
-          echo "$MULTILINE_JSON_STRING" > test.txt
+          echo "hello!" > test.txt
 
       - uses: EndBug/add-and-commit@v9
         with:
