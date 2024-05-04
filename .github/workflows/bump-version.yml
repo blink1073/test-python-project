@@ -6,7 +6,6 @@ on:
 jobs:
   debug:
     runs-on: ubuntu-20.04
-    permissions: read-all
     environment: release
     timeout-minutes: 5
     steps:
@@ -22,6 +21,5 @@ jobs:
         env:
             GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          name=$(gh api user --jq '.name')
+          name=$(gh api users/$GITHUB_ACTOR --jq '.name')
           echo "$name"
-          echo "$GITHUB_ACTOR"
