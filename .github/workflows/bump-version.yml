@@ -36,5 +36,6 @@ jobs:
       - name: Bump the version
         run: |
           pipx run hatch version ${{ inputs.version }}
+          git tag -a ${{inputs.version}} -m "bump ${{inputs.version}}"
           git push origin
           git push origin --tags
