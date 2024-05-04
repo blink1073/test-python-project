@@ -16,5 +16,4 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        NAME=$(gh api users/$GITHUB_ACTOR --jq '.name')
-        echo $NAME
+        echo "hello $GITHUB_ACTOR"
