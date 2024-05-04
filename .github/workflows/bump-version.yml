@@ -19,7 +19,7 @@ jobs:
 
       - name: "Describe user"
         env:
-            GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+            GH_TOKEN: ${{ github.token }}
         run: |
           name=$(gh api users/$GITHUB_ACTOR --jq '.name')
           echo "$name"
