@@ -9,7 +9,6 @@ jobs:
     environment: release
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v2
       - name: Generate a token
         id: generate-token
         uses: actions/create-github-app-token@v1
@@ -17,9 +16,24 @@ jobs:
           app-id: ${{ vars.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
 
-      - name: "Describe user"
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Set up Git Config
         env:
-            GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
-          name=$(gh api users/$GITHUB_ACTOR --jq '.name')
-          echo "$name"
+          NAME=$(gh api users/$GITHUB_ACTOR --jq '.name')
+          git config user.email "$GITHUB_USER@users.noreply.github.com"
+          git config user.name "$NAME"
+
+      - name: Bump the version
+        run: |
+          pipx run hatch version 0.3.0
+          git push origin automated-release-check
+          git push origin --tags
