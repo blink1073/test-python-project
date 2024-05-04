@@ -9,7 +9,7 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+rc[0-9]+"
 
 jobs:
-  debug:
+  bump-react:
     runs-on: ubuntu-20.04
     steps:
     - name: Debug

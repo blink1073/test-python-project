@@ -5,7 +5,7 @@ on:
       version:
         description: "The next version to set"
 jobs:
-  debug:
+  bump:
     runs-on: ubuntu-20.04
     environment: release
     timeout-minutes: 5
@@ -36,5 +36,5 @@ jobs:
       - name: Bump the version
         run: |
           pipx run hatch version ${{ inputs.version }}
-          git push origin automated-release-check
+          git push origin
           git push origin --tags
