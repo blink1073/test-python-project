@@ -8,7 +8,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
-      - run: |
+      - name: "Describe user"
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run: |
           name=$(gh api user --jq '.name')
           echo "$name"
           echo "$GITHUB_ACTOR"
