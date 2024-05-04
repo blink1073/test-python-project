@@ -6,8 +6,7 @@ on:
 jobs:
   debug:
     runs-on: ubuntu-20.04
-    permissions:
-        contents: read
+    permissions: read-all
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
