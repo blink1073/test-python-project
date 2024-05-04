@@ -10,9 +10,16 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
       - name: "Describe user"
         env:
-            GH_TOKEN: ${{ github.token }}
+            GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           name=$(gh api user --jq '.name')
           echo "$name"
