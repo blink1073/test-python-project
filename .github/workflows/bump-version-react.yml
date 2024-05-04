@@ -16,4 +16,7 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        echo "hello $GITHUB_ACTOR"
+        NAME=$(git for-each-ref $GITHUB_REF --shell --format='TAGGER=%(taggername)')
+        echo $NAME
+        EMAIL=$(git for-each-ref $GITHUB_REF --shell --format='TAGGER=%(taggeremail)')
+        echo $EMAIL
