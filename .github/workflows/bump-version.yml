@@ -1,0 +1,40 @@
+name: Bump Version
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "The next version to set"
+jobs:
+  debug:
+    runs-on: ubuntu-20.04
+    environment: release
+    timeout-minutes: 5
+    steps:
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Set up Git Config
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NAME=$(gh api users/$GITHUB_ACTOR --jq '.name')
+          git config user.email "$GITHUB_USER@users.noreply.github.com"
+          git config user.name "$NAME"
+
+      - name: Bump the version
+        run: |
+          pipx run hatch version ${{ inputs.version }}
+          git push origin automated-release-check
+          git push origin --tags

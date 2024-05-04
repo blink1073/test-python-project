@@ -1,0 +1,20 @@
+name: Bump Version Reaction
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+.post[0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+[a-b][0-9]+"
+      - "[0-9]+.[0-9]+.[0-9]+rc[0-9]+"
+
+jobs:
+  debug:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Debug
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        NAME=$(gh api users/$GITHUB_ACTOR --jq '.name')
+        echo $NAME
