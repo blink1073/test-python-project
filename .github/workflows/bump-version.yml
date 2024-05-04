@@ -7,6 +7,7 @@ jobs:
   debug:
     runs-on: ubuntu-20.04
     permissions: read-all
+    environment: release
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
