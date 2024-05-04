@@ -37,5 +37,7 @@ jobs:
         run: |
           pipx run hatch version ${{ inputs.version }}
           git tag -a ${{inputs.version}} -m "bump ${{inputs.version}}"
+          git add .
+          git commit -a -m "bump ${{inputs.version}}"
           git push origin
           git push origin --tags
