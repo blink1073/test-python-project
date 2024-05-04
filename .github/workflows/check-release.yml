@@ -1,14 +1,22 @@
-name: Debug
+name: Check Release
 on:
   push:
+    branches: ["main"]
   pull_request:
+    branches: ["*"]
+
 jobs:
-  debug:
-    runs-on: ubuntu-20.04
-    timeout-minutes: 5
+  check_release:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: |
-          name=$(gh api user --jq '.name')
-          echo "$name"
-          echo "$GITHUB_ACTOR"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Base Setup
+        uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
+      - name: Install Dependencies
+        run: |
+          pip install -e .
+      - name: Check Release
+        uses: blink1073/jupyter_releaser/.github/actions/check-release@use-pr-for-changes
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
