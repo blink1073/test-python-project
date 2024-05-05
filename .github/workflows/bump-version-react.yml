@@ -17,8 +17,7 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
       run: |
-        git fetch origin --tags
         NAME=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggername)')
-        echo $NAME
+        echo "name: $NAME"
         EMAIL=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggeremail)')
-        echo $EMAIL
+        echo "email: $EMAIL"
