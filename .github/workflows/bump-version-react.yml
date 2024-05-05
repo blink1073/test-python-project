@@ -20,3 +20,28 @@ jobs:
         echo "name: $NAME"
         EMAIL=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggeremail)')
         echo "email: $EMAIL"
+        git show $GITHUB_REF_NAME
+        SHA=$(shasum -a 256 LICENSE | awk '{print $1;}')
+
+        echo "Product: Test Python Project"
+        echo "Version: $GITHUB_REF_NAME"
+        echo "Releaser: $NAME"
+        echo "Filename: LICENSE"
+        echo "SHASUM: $SHA"
+
+    - name: Get Job ID from GH API
+      id: get-job-id
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        jobs=$(gh api repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/attempts/${{ github.run_attempt }}/jobs)
+        job_id=$(echo $jobs | jq -r '.jobs[] | select(.runner_name=="${{ runner.name }}") | .id')
+        echo "job_id=$job_id" >> $GITHUB_OUTPUT
+
+  upload-logs:
+    runs-on: ubuntu-20.04
+    needs: [bump-react]
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        echo "job_id: ${{ needs.bump-react.outputs.job_id }}"
