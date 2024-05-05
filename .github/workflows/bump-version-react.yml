@@ -11,16 +11,14 @@ on:
 jobs:
   bump-react:
     runs-on: ubuntu-20.04
+    outputs:
+      job_id: ${{ steps.get-job-id.outputs.job_id }}
     steps:
     - uses: actions/checkout@v2
     - name: Debug
       run: |
         echo "ref: $GITHUB_REF_NAME"
-        NAME=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggername)')
-        echo "name: $NAME"
-        EMAIL=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggeremail)')
-        echo "email: $EMAIL"
-        git show $GITHUB_REF_NAME
+        NAME=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(authorname)')
         SHA=$(shasum -a 256 LICENSE | awk '{print $1;}')
 
         echo "Product: Test Python Project"
@@ -37,6 +35,7 @@ jobs:
         jobs=$(gh api repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/attempts/${{ github.run_attempt }}/jobs)
         job_id=$(echo $jobs | jq -r '.jobs[] | select(.runner_name=="${{ runner.name }}") | .id')
         echo "job_id=$job_id" >> $GITHUB_OUTPUT
+        echo "hello there $job_id"
 
   upload-logs:
     runs-on: ubuntu-20.04
