@@ -20,3 +20,11 @@ jobs:
         echo "name: $NAME"
         EMAIL=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggeremail)')
         echo "email: $EMAIL"
+        git show $GITHUB_REF_NAME
+        SHA=$(shasum -a 256 LICENSE | awk '{print $1;}')
+
+        echo "Product: Test Python Project"
+        echo "Version: $GITHUB_REF_NAME"
+        echo "Releaser: $NAME"
+        echo "Filename: LICENSE"
+        echo "SHASUM: $SHA"
