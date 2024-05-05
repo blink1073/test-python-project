@@ -11,8 +11,6 @@ on:
 jobs:
   bump-react:
     runs-on: ubuntu-20.04
-    outputs:
-      job_id: ${{ steps.get-job-id.outputs.job_id }}
     steps:
     - uses: actions/checkout@v2
     - name: Debug
@@ -27,24 +25,18 @@ jobs:
         echo "Filename: LICENSE"
         echo "SHASUM: $SHA"
 
-    - name: Get Job ID from GH API
-      id: get-job-id
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        jobs=$(gh api repos/${{ github.repository }}/actions/runs/${{ github.run_id}}/attempts/${{ github.run_attempt }}/jobs)
-        job_id=$(echo $jobs | jq -r '.jobs[] | select(.runner_name=="${{ runner.name }}") | .id')
-        echo "job_id=$job_id" >> $GITHUB_OUTPUT
-        echo "hello there $job_id"
+  tests:
+    uses: ./.github/workflows/test.yml
 
   upload-logs:
     runs-on: ubuntu-20.04
-    needs: [bump-react]
+    needs: [bump-react, tests]
     steps:
     - uses: actions/checkout@v2
     - name: get logs
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        job_id="${{ needs.bump-react.outputs.job_id }}"
+        job_id="${{ needs.tests.outputs.job_id }}"
+        echo "$job_id"
         gh run view --log --job=${job_id}
