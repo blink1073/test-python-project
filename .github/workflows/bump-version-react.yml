@@ -14,9 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Debug
-      env:
-        GH_TOKEN: ${{ github.token }}
       run: |
+        echo "ref: $GITHUB_REF_NAME"
         NAME=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggername)')
         echo "name: $NAME"
         EMAIL=$(git for-each-ref $GITHUB_REF_NAME --shell --format='%(taggeremail)')
