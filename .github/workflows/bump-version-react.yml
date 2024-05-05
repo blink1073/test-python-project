@@ -42,5 +42,9 @@ jobs:
     needs: [bump-react]
     steps:
     - uses: actions/checkout@v2
-    - run: |
-        echo "job_id: ${{ needs.bump-react.outputs.job_id }}"
+    - name: get logs
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        job_id="${{ needs.bump-react.outputs.job_id }}"
+        gh run view --log --job=${job_id}
