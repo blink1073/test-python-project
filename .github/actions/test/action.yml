@@ -7,7 +7,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: /${{ env.GITHUB_ACTION_PATH }}/../pr-script
+    - uses: ../pr-script
       with:
         target: "foo"
         token: "bar"
