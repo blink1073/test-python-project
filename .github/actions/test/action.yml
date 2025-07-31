@@ -7,9 +7,14 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - shell: bash
-      run: |
-        echo ${{ github.triggering_actor }}
-        pip install ghapi
-        export GITHUB_TOKEN=${{ inputs.token }}
-        ACTOR=${{ github.triggering_actor }} python ${{ github.action_path }}/test.py
+    - uses: ${{ env.GITHUB_ACTION_PATH }}/../pr-script
+      with:
+        target: "foo"
+        token: "bar"
+
+    # - shell: bash
+    #   run: |
+    #     echo ${{ github.triggering_actor }}
+    #     pip install ghapi
+    #     export GITHUB_TOKEN=${{ inputs.token }}
+    #     ACTOR=${{ github.triggering_actor }} python ${{ github.action_path }}/test.py
